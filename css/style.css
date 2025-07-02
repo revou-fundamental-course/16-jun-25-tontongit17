@@ -1,121 +1,131 @@
+/* css/style.css */
+:root {
+  --primary: #0066cc;
+  --secondary: #f2f2f2;
+  --text: #333;
+  --light: #fff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.banner {
+  width: 100%;
+  height: 60vh;
+  background: url("../images/photo01.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: var(--light);
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Home section */
+.welcome {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.welcome p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Profil page */
+.profile-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.profile-page img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.profile-page h2 {
+  margin-top: 2rem;
+  color: var(--primary);
+}
+
+/* Form Message Us */
+.message-us {
+  background: var(--secondary);
+  padding: 2rem 1rem;
+}
+.message-us form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+}
+.message-us input,
+.message-us textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.message-us button {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.message-us button:hover {
+  background: darken(var(--primary), 10%);
+}
+
+.output {
+  margin-top: 1.5rem;
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2rem;
   }
-  
-  body {
-    line-height: 1.6;
-    background-color: #fff;
+  .nav-links {
+    display: none; /* You can implement mobile menu later */
   }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
+  .message-us form {
+    width: 90%;
   }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
-  nav a {
-    margin-left: 1rem;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    border-radius: 5px;
-  }
-  
-  .welcome {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .banner {
-    width: 100%;
-    height: 300px;
-    background-color: #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  
-  .headquarter {
-    padding: 2rem;
-    border-top: 1px solid #ccc;
-  }
-  
-  .cities {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-  }
-  
-  .city {
-    text-align: center;
-  }
-  
-  .circle {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    margin: 0 auto 0.5rem;
-  }
-  
-  .message-us {
-    padding: 2rem;
-    border-top: 1px solid #ccc;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-  }
-  
-  form input,
-  form textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-  }
-  
-  .gender {
-    margin-bottom: 1rem;
-  }
-  
-  .output {
-    border: 1px solid #000;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #ccc;
-    margin-top: 2rem;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .cities {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .banner {
-      height: 200px;
-    }
-  }  
+}
