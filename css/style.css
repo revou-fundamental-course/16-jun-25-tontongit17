@@ -65,6 +65,7 @@ header {
   background: url('../images/photo10.jpg') no-repeat center center/cover;
   padding: 40px 20px;
   color: white;
+  text-align: center;
 }
 
 .message-us form {
