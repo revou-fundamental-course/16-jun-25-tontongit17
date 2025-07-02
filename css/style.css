@@ -84,8 +84,8 @@ header {
 }
 
 .message-us button {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   padding: 10px;
   border: none;
   cursor: pointer;
